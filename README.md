@@ -16,5 +16,5 @@ Mimics UConn's production stack or a typical CentOS LAMP stack.
 
 This repository is intended to be included as a submodule in other projects. Include the `Vagrantfile` in your project's root and clone this repository into your project using the following commands:
 
-`$ git submodule add git@github.com:uconn/vagrant-centos-lamp.git vagrant`
-`$ git submodule update --init --recursive`
+    $ git submodule add git@github.com:uconn/vagrant-centos-lamp.git vagrant`
+    $ git submodule update --init --recursive`
