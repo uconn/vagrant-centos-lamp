@@ -46,3 +46,6 @@
 [submodule "puppet/modules/wget"]
 	path = puppet/modules/wget
 	url = git@github.com:maestrodev/puppet-wget.git
+[submodule "puppet/modules/epel"]
+	path = puppet/modules/epel
+	url = git@github.com:stahnma/puppet-module-epel.git
