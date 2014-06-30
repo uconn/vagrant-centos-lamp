@@ -1,0 +1,48 @@
+[submodule "puppet/modules/yum"]
+	path = puppet/modules/yum
+	url = git@github.com:example42/puppet-yum.git
+[submodule "puppet/modules/stdlib"]
+	path = puppet/modules/stdlib
+	url = git@github.com:puppetlabs/puppetlabs-stdlib.git
+[submodule "puppet/modules/git"]
+	path = puppet/modules/git
+	url = git@github.com:puppetlabs/puppetlabs-git.git
+[submodule "puppet/modules/puppi"]
+	path = puppet/modules/puppi
+	url = git@github.com:example42/puppi.git
+[submodule "puppet/modules/apache"]
+	path = puppet/modules/apache
+	url = git@github.com:puppetlabs/puppetlabs-apache.git
+[submodule "puppet/modules/mysql"]
+	path = puppet/modules/mysql
+	url = git@github.com:puppetlabs/puppetlabs-mysql.git
+[submodule "puppet/modules/php"]
+	path = puppet/modules/php
+	url = git@github.com:example42/puppet-php.git
+[submodule "puppet/modules/rpmforge"]
+	path = puppet/modules/rpmforge
+	url = git@github.com:lboynton/puppet-rpmforge.git
+[submodule "puppet/modules/pear"]
+	path = puppet/modules/pear
+	url = git@github.com:rafaelfelix/puppet-pear.git
+[submodule "puppet/modules/rvm"]
+	path = puppet/modules/rvm
+	url = git@github.com:maestrodev/puppet-rvm.git
+[submodule "puppet/modules/nodejs"]
+	path = puppet/modules/nodejs
+	url = git@github.com:willdurand/puppet-nodejs.git
+[submodule "puppet/modules/timezone"]
+	path = puppet/modules/timezone
+	url = git@github.com:saz/puppet-timezone.git
+[submodule "puppet/modules/htop"]
+	path = puppet/modules/htop
+	url = git@github.com:sund/puppet-htop.git
+[submodule "puppet/modules/gcc"]
+	path = puppet/modules/gcc
+	url = git@github.com:puppetlabs/puppetlabs-gcc.git
+[submodule "puppet/modules/puppet-mailcatcher"]
+	path = puppet/modules/puppet-mailcatcher
+	url = git@github.com:actionjack/puppet-mailcatcher.git
+[submodule "puppet/modules/wget"]
+	path = puppet/modules/wget
+	url = git@github.com:maestrodev/puppet-wget.git
