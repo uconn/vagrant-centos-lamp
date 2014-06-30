@@ -1,0 +1,26 @@
+{
+  "author": "sund",
+  "source": "various",
+  "version": "0.1.1",
+  "types": [
+
+  ],
+  "dependencies": [
+
+  ],
+  "summary": "a puppet module for htop",
+  "description": "ensures htop is installed",
+  "license": "Apache License, Version 2.0",
+  "checksums": {
+    "LICENSE": "e8c1458438ead3c34974bc0be3a03ed6",
+    "Modulefile": "98af6a2f5d49859e07aa4ed87d1aebc5",
+    "README.md": "58337af36d7e3c824993a2e7bc0ee59d",
+    "manifests/init.pp": "9fd1a730eb2b8398f5c5172db0a9a26b",
+    "manifests/install.pp": "fba948db50010b7a87a4656420ebaddb",
+    "manifests/params.pp": "7090f38496f402ce1155b4395b5a0b3b",
+    "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+    "tests/init.pp": "cc652c027a46df983fe9bb6d180848bf"
+  },
+  "project_page": "https://github.com/sund/puppet-htop",
+  "name": "sund-htop"
+}

@@ -1,0 +1,47 @@
+---
+vagrant:
+    vm:
+        box_url: centos-6.5-amd64-vbox
+        box_url: https://dl.dropbox.com/s/3fgr7lbvcpn51py/centos_6-5_i386.box
+        hostname: null
+        memory: '1024'
+        cpus: '2'
+        chosen_provider: virtualbox
+        network:
+            private_network: 192.168.33.10
+            forwarded_port:
+                apache:
+                    host: '8089'
+                    guest: '80'
+                livereload:
+                    host: '35729'
+                    guest: '35729'
+        provision:
+            puppet:
+                manifests_path: vagrant/puppet/manifests
+                manifest_file: manifest.pp
+                module_path: vagrant/puppet/modules
+                options:
+                    - '--verbose'
+                    - '--debug'
+                    - '--hiera_config /vagrant/vagrant/puppet/hiera.yaml'
+        synced_folder:
+            www:
+                source: ./
+                target: /vagrant
+                nfs: 'false'
+                owner: 'vagrant'
+                group: 'vagrant'
+server:
+    php_ini: '/etc/php.ini'
+    timezone: 'America/New_York'
+mysql:
+    root_password: 'localrootpw'
+    host: 'localhost'
+    database: 'wordpress'
+    user: 'wordpress'
+    password: 'localpw'
+wordpress:
+    theme_directory: '/vagrant/www/content/themes/impact/'
+    database_dumpfile: '/vagrant/db/dump.sql.gz'
+    config_file: '/vagrant/vagrant/puppet/files/wp-config.local.php'
