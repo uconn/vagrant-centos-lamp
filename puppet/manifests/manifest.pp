@@ -252,5 +252,5 @@ include lamp
 include iptables
 #include postfix
 #include wordpress_config
-include setup_theme
-include restore_database
+#include setup_theme
+#include restore_database
