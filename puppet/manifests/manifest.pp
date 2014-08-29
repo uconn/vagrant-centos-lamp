@@ -80,7 +80,8 @@ class lamp {
             servername => 'localhost',
             default_vhost => false,
             user => 'vagrant',
-            group => 'vagrant'
+            group => 'vagrant',
+            sendfile => 'Off'
     }
 
     class { 'apache::mod::php': }
