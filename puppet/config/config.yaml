@@ -1,7 +1,7 @@
 ---
 vagrant:
     vm:
-        box_url: centos-6.5-amd64-vbox
+        box: centos-6.5-amd64-vbox
         box_url: https://dl.dropbox.com/s/3fgr7lbvcpn51py/centos_6-5_i386.box
         hostname: null
         memory: '1024'
