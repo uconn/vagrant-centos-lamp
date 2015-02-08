@@ -6,6 +6,7 @@ dir = File.dirname(File.expand_path(__FILE__))
 
 configValues = YAML.load_file("#{dir}/vagrant/puppet/config/config.yaml")
 data = configValues['vagrant']
+mysqlData = configValues['mysql']
 
 Vagrant.configure("2") do |config|
     config.vm.box = "#{data['vm']['box']}"
@@ -67,5 +68,31 @@ Vagrant.configure("2") do |config|
         if !data['vm']['provision']['puppet']['options'].empty?
             puppet.options = data['vm']['provision']['puppet']['options']
         end
+    end
+
+    # Before halt and destroy, dump the database.
+    config.trigger.before [:halt, :destroy], :stdout => true do
+        info "DUMPING DATABASE"
+
+        db = mysqlData['database']
+        user = mysqlData['user']
+        password = mysqlData['password']
+
+        run "vagrant ssh -c 'if [ type mysql >/dev/null 2>&1 ]; then
+            mysqldump -u #{user} -p\'#{password}\' #{db} > /vagrant/db/#{db}.sql
+        fi'"
+    end
+
+    # After bringing the box up, import the database.
+    config.trigger.after :up, :stdout => true do
+        info "IMPORTING DATABASE"
+
+        db = mysqlData['database']
+        user = mysqlData['user']
+        password = mysqlData['password']
+
+        run "vagrant ssh -c 'if [ type mysql >/dev/null 2>&1 && -f /vagrant/db/#{db}.sql ]; then
+            mysql -u #{user} -p\'#{password}\' #{db} < /vagrant/db/#{db}.sql
+        fi'"
     end
 end
