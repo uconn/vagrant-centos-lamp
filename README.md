@@ -11,6 +11,7 @@ Mimics UConn's production stack or a typical CentOS LAMP stack.
 * [Ruby Gems](http://rubygems.org/)
 * [Virtual Box](https://www.virtualbox.org/)
 * [Vagrant](https://www.vagrantup.com/)
+* [Vagrant Triggers](https://github.com/emyl/vagrant-triggers)
 
 ### Usage
 
@@ -18,6 +19,7 @@ This repository is intended to be included as a submodule in other projects. Inc
 
     $ git submodule add git@github.com:uconn/vagrant-centos-lamp.git vagrant
     $ git submodule update --init --recursive
+    $ cp vagrant/Vagrantfile .
 
 __For a working example of this project being used, check out our other project [UConn Wordpress Boilerplate](https://github.com/uconn/uconn-wordpress-boilerplate).__
 
