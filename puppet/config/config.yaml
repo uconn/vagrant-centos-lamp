@@ -29,7 +29,7 @@ vagrant:
             www:
                 source: ./
                 target: /vagrant
-                nfs: 'true'
+                nfs: 'false'
                 owner: 'vagrant'
                 group: 'vagrant'
 server:
